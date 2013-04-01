@@ -39,242 +39,165 @@
 
     <div id="markdown-input">
 <textarea class="markdown-input" data-markdown-preview="#markdown-preview" cols="40" rows="20">
-# Mou
+GitHub Flavored Markdown
+================================
 
-![Mou icon](http://mouapp.com/Mou_128.png)
+*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
 
-## Overview
+Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
 
-**Mou**, the missing Markdown editor for *web developers*.
+Roses are red
+Violets are blue
 
-### Syntax
+The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
 
-#### Strong and Emphasize
+Roses are red
+Violets are blue
 
-**strong** or __strong__ ( Cmd + B )
+Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
 
-*emphasize* or _emphasize_ ( Cmd + I )
+A bit of the GitHub spice
+-------------------------
 
-**Sometimes I want a lot of text to be bold.
-Like, seriously, a _LOT_ of text**
+In addition to the changes in the previous section, certain references are auto-linked:
 
-#### Blockquotes
+* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* \#Num: #1
+* User/#Num: mojombo#1
+* User/Project#Num: mojombo/god#1
 
-&gt; Right angle brackets &amp;gt; are used for block quotes.
+These are dangerous goodies though, and we need to make sure email addresses don't get mangled:
 
-#### Links and Email
+My email addy is tom@github.com.
 
-An email &lt;example@example.com&gt; link.
+Math is hard, let's go shopping
+-------------------------------
 
-Simple inline link &lt;http://chenluois.com&gt;, another inline link [Smaller](http://smallerapp.com), one more inline link with title [Resize](http://resizesafari.com &quot;a Safari extension&quot;).
+In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
 
-A [reference style][id] link. Input id, then anywhere in the doc, define the link with corresponding id:
+Triangles man! a^2 + b^2 = c^2
 
-[id]: http://mouapp.com &quot;Markdown editor on Mac OS X&quot;
+We all like making lists
+------------------------
 
-Titles ( or called tool tips ) in the links are optional.
+The above header should be an H2 tag. Now, for a list of fruits:
 
-#### Images
+* Red Apples
+* Purple Grapes
+* Green Kiwifruits
 
-An inline image ![Smaller icon](http://smallerapp.com/favicon.ico &quot;Title here&quot;), title is optional.
+Let's get crazy:
 
-A ![Resize icon][2] reference style image.
+1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
 
-[2]: http://resizesafari.com/favicon.ico &quot;Title&quot;
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
 
-#### Inline code and Block code
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
 
-Inline code are surround by `backtick` key. To create a block code:
+What about some code **in** a list? That's insane, right?
 
-  Indent each line by at least 1 tab, or 4 spaces.
-    var Mou = exactlyTheAppIwant;
+1. In Ruby you can map like this:
 
-####  Ordered Lists
+        ['a', 'b'].map { |x| x.uppercase }
 
-Ordered lists are created using &quot;1.&quot; + Space:
+2. In Rails, you can do a shortcut:
 
-1. Ordered list item
-2. Ordered list item
-3. Ordered list item
+        ['a', 'b'].map(&:uppercase)
 
-#### Unordered Lists
+Some people seem to like definition lists
 
-Unordered list are created using &quot;*&quot; + Space:
+<dl>
+  <dt>Lower cost</dt>
+  <dd>The new version of this product costs significantly less than the previous one!</dd>
+  <dt>Easier to use</dt>
+  <dd>We've changed the product so that it's much easier to use!</dd>
+</dl>
 
-* Unordered list item
-* Unordered list item
-* Unordered list item
+I am a robot
+------------
 
-Or using &quot;-&quot; + Space:
+Maybe you want to print `robot` to the console 1000 times. Why not?
 
-- Unordered list item
-- Unordered list item
-- Unordered list item
+    def robot_invasion
+      puts("robot " * 1000)
+    end
 
-#### Hard Linebreak
+You see, that was formatted as code because it's been indented by four spaces.
 
-End a line with two or more spaces will create a hard linebreak, called `&lt;br /&gt;` in HTML. ( Control + Return )
-Above line ended with 2 spaces.
+How about we throw some angle braces and ampersands in there?
 
-#### Horizontal Rules
+    <div class="footer">
+        &copy; 2004 Foo Corporation
+    </div>
 
-Three or more asterisks or dashes:
+Set in stone
+------------
 
-***
-
----
-
-- - - -
-
-#### Headers
-
-Setext-style:
-
-This is H1
-==========
-
-This is H2
-----------
-
-atx-style:
-
-# This is H1
-## This is H2
-### This is H3
-#### This is H4
-##### This is H5
-###### This is H6
-
-
-### Extra Syntax
-
-#### Footnotes
-
-Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:
-
-That&#x27;s some text with a footnote.[^1]
-
-[^1]: And that&#x27;s the footnote.
-
-
-#### Strikethrough
-
-Wrap with 2 tilde characters:
-
-~~Strikethrough~~
-
-
-#### Fenced Code Blocks
-
-Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:
-
-```
-Fenced code blocks are like Stardard Markdown’s regular code
-blocks, except that they’re not indented and instead rely on
-a start and end fence lines to delimit the code block.
-```
-
-#### Tables
-
-A simple table looks like this:
-
-First Header | Second Header | Third Header
------------- | ------------- | ------------
-Content Cell | Content Cell  | Content Cell
-Content Cell | Content Cell  | Content Cell
-
-If you wish, you can add a leading and tailing pipe to each line of the table:
-
-| First Header | Second Header | Third Header |
-| ------------ | ------------- | ------------ |
-| Content Cell | Content Cell  | Content Cell |
-| Content Cell | Content Cell  | Content Cell |
-
-Specify alignement for each column by adding colons to separator lines:
-
-First Header | Second Header | Third Header
-:----------- | :-----------: | -----------:
-Left         | Center        | Right
-Left         | Center        | Right
-
-
-### Shortcuts
-
-#### View
-
-* Toggle live preview: Shift + Cmd + I
-* Toggle Words Counter: Shift + Cmd + W
-* Toggle Transparent: Shift + Cmd + T
-* Toggle Floating: Shift + Cmd + F
-* Left/Right = 1/1: Cmd + 0
-* Left/Right = 3/1: Cmd + +
-* Left/Right = 1/3: Cmd + -
-* Toggle Writing orientation: Cmd + L
-* Toggle fullscreen: Control + Cmd + F
-
-#### Actions
-
-* Copy HTML: Option + Cmd + C
-* Strong: Select text, Cmd + B
-* Emphasize: Select text, Cmd + I
-* Inline Code: Select text, Cmd + K
-* Strikethrough: Select text, Cmd + U
-* Link: Select text, Control + Shift + L
-* Image: Select text, Control + Shift + I
-* Select Word: Control + Option + W
-* Select Line: Shift + Cmd + L
-* Select All: Cmd + A
-* Deselect All: Cmd + D
-* Convert to Uppercase: Select text, Control + U
-* Convert to Lowercase: Select text, Control + Shift + U
-* Convert to Titlecase: Select text, Control + Option + U
-* Convert to List: Select lines, Control + L
-* Convert to Blockquote: Select lines, Control + Q
-* Convert to H1: Cmd + 1
-* Convert to H2: Cmd + 2
-* Convert to H3: Cmd + 3
-* Convert to H4: Cmd + 4
-* Convert to H5: Cmd + 5
-* Convert to H6: Cmd + 6
-* Convert Spaces to Tabs: Control + [
-* Convert Tabs to Spaces: Control + ]
-* Insert Current Date: Control + Shift + 1
-* Insert Current Time: Control + Shift + 2
-* Insert entity &lt;: Control + Shift + ,
-* Insert entity &gt;: Control + Shift + .
-* Insert entity &amp;: Control + Shift + 7
-* Insert entity Space: Control + Shift + Space
-* Insert Scriptogr.am Header: Control + Shift + G
-* Shift Line Left: Select lines, Cmd + [
-* Shift Line Right: Select lines, Cmd + ]
-* New Line: Cmd + Return
-* Comment: Cmd + /
-* Hard Linebreak: Control + Return
-
-#### Edit
-
-* Auto complete current word: Esc
-* Find: Cmd + F
-* Close find bar: Esc
-
-#### Post
-
-* Post on Scriptogr.am: Control + Shift + S
-* Post on Tumblr: Control + Shift + T
-
-#### Export
-
-* Export HTML: Option + Cmd + E
-* Export PDF:  Option + Cmd + P
-
-
-### And more?
-
-Don&#x27;t forget to check Preferences, lots of useful options are there.
-
-Follow [@chenluois](http://twitter.com/chenluois) on Twitter for the latest news.
-
-For feedback, use the menu `Help` - `Send Feedback`</textarea>
+Preformatted blocks are useful for ASCII art:
+
+<pre>
+             ,-.
+    ,     ,-.   ,-.
+   / \   (   )-(   )
+   \ |  ,.>-(   )-<
+    \|,' (   )-(   )
+     Y ___`-'   `-'
+     |/__/   `-'
+     |
+     |
+     |    -hrr-
+  ___|_____________
+</pre>
+
+Playing the blame game
+----------------------
+
+If you need to blame someone, the best way to do so is by quoting them:
+
+> I, at any rate, am convinced that He does not throw dice.
+
+Or perhaps someone a little less eloquent:
+
+> I wish you'd have given me this written question ahead of time so I
+> could plan for it... I'm sure something will pop into my head here in
+> the midst of this press conference, with all the pressure of trying to
+> come up with answer, but it hadn't yet...
+>
+> I don't want to sound like
+> I have made no mistakes. I'm confident I have. I just haven't - you
+> just put me under the spot here, and maybe I'm not as quick on my feet
+> as I should be in coming up with one.
+
+Table for two
+-------------
+
+<table>
+  <tr>
+    <th>ID</th><th>Name</th><th>Rank</th>
+  </tr>
+  <tr>
+    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
+  </tr>
+</table>
+
+Crazy linking action
+--------------------
+
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"</textarea>
     </div>
 
     <div id="markdown-preview" class="markdown-body">
