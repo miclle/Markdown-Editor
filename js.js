@@ -10,4 +10,8 @@ $(function(){
   });
 
   $('.markdown-input').markdown();
+
+  $("#download-box a").click(function(){
+    $(this).attr('href', "data:application/stream;base64," + $.base64.encode($(".markdown-input").val()));
+  });
 });
