@@ -9,9 +9,19 @@ $(function(){
     }
   });
 
-  $('.markdown-input').markdown();
+  var editor = $('.markdown-input').markdown();
+
+  console.log(editor);
 
   $("#download-box a").click(function(){
     $(this).attr('href', "data:application/stream;base64," + $.base64.encode($(".markdown-input").val()));
   });
+
+  key('⌘+s, ctrl+s', function(event, handler){
+
+    console.log(handler.shortcut, handler.scope);
+
+    return false;
+  });
+
 });

@@ -9,6 +9,7 @@
   jQuery.fn.extend({
     markdown: function(){
       return this.each( function(){
+
         if ( this.type !== 'textarea' ){
           return false;
         }
