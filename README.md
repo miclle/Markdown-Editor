@@ -3,6 +3,18 @@
 ##Demo
 http://markdown.miclle.com/
 
+##Key Bindings
+* Strong: Select text, Cmd + B	/	Ctrl + B
+* Emphasize: Select text, Cmd + I	/	Ctrl + I
+* Inline Code: Select text, Cmd + K	/	Ctrl + K
+* Strikethrough: Select text, Cmd + U	/	Ctrl + U
+* Convert to H1: Cmd + 1	/	Ctrl + 1
+* Convert to H2: Cmd + 2	/	Ctrl + 2
+* Convert to H3: Cmd + 3	/	Ctrl + 3
+* Convert to H4: Cmd + 4	/	Ctrl + 4
+* Convert to H5: Cmd + 5	/	Ctrl + 5
+* Convert to H6: Cmd + 6	/	Ctrl + 6
+
 ##Require libs
 * CodeMirror http://codemirror.net
 * marked https://github.com/chjj/marked

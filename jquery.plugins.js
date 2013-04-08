@@ -26,7 +26,38 @@
           autofocus:        true,
           indentWithTabs:   true,
           tabSize:          2,
-          showCursorWhenSelecting:  true
+          showCursorWhenSelecting:  true,
+          extraKeys: {
+            "Cmd-B"   : function(cm) { cm.wrapSymbolTag("**") },
+            "Ctrl-B"  : function(cm) { cm.wrapSymbolTag("**") },
+
+            "Cmd-I"   : function(cm) { cm.wrapSymbolTag("*") },
+            "Ctrl-I"  : function(cm) { cm.wrapSymbolTag("*") },
+
+            "Cmd-U"   : function(cm) { cm.wrapSymbolTag("~~") },
+            "Ctrl-U"  : function(cm) { cm.wrapSymbolTag("~~") },
+
+            "Cmd-K"   : function(cm) { cm.wrapSymbolTag("`") },
+            "Ctrl-K"  : function(cm) { cm.wrapSymbolTag("`") },
+
+            "Cmd-1"   : function(cm) { cm.insertTitle(1) },
+            "Ctrl-1"  : function(cm) { cm.insertTitle(1) },
+
+            "Cmd-2"   : function(cm) { cm.insertTitle(2) },
+            "Ctrl-2"  : function(cm) { cm.insertTitle(2) },
+
+            "Cmd-3"   : function(cm) { cm.insertTitle(3) },
+            "Ctrl-3"  : function(cm) { cm.insertTitle(3) },
+
+            "Cmd-4"   : function(cm) { cm.insertTitle(4) },
+            "Ctrl-4"  : function(cm) { cm.insertTitle(4) },
+
+            "Cmd-5"   : function(cm) { cm.insertTitle(5) },
+            "Ctrl-5"  : function(cm) { cm.insertTitle(5) },
+
+            "Cmd-6"   : function(cm) { cm.insertTitle(6) },
+            "Ctrl-6"  : function(cm) { cm.insertTitle(6) }
+          }
         });
 
         editor.on("change", function(doc, changeObj) {
