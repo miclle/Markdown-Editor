@@ -31,6 +31,7 @@
 
         editor.on("change", function(doc, changeObj) {
           $preview.html(marked(doc.getValue()));
+          $textarea.val(doc.getValue());
         });
 
         editor.on('scroll', function(instance){
