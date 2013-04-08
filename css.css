@@ -233,3 +233,6 @@ em,i{font-style:italic}
 .markdown-body pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}
 .markdown-body pre code,
 .markdown-body pre tt{margin:0;padding:0;background-color:transparent;border:none}
+
+#download-box {position:Fixed; top: 40%; right: 20px; }
+#download-box img {width: 24px; height: 24px;cursor: pointer;}
