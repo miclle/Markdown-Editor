@@ -14,6 +14,7 @@ http://markdown.miclle.com/
 * Convert to H4: Cmd + 4	/	Ctrl + 4
 * Convert to H5: Cmd + 5	/	Ctrl + 5
 * Convert to H6: Cmd + 6	/	Ctrl + 6
+* Save Markdown Content: Cmd + S  / Ctrl + S
 
 ##Require libs
 * CodeMirror http://codemirror.net

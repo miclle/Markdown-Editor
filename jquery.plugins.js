@@ -56,7 +56,10 @@
             "Ctrl-5"  : function(cm) { cm.insertTitle(5) },
 
             "Cmd-6"   : function(cm) { cm.insertTitle(6) },
-            "Ctrl-6"  : function(cm) { cm.insertTitle(6) }
+            "Ctrl-6"  : function(cm) { cm.insertTitle(6) },
+
+            "Cmd-S"   : function(cm) { cm.saveMarkdownContent() },
+            "Ctrl-S"  : function(cm) { cm.saveMarkdownContent() }
           }
         });
 

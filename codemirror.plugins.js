@@ -26,4 +26,23 @@
     this.setCursor(cursor);
   });
 
+  /**
+   * save markdown content
+   */
+  CodeMirror.defineExtension("saveMarkdownContent", function() {
+    function eventFire(el, etype){
+      if (el.fireEvent) {
+        (el.fireEvent('on' + etype));
+      } else {
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+      }
+    }
+    var link = document.createElement("a");
+    link.download = "markdown.md";
+    link.href = "data:application/stream;base64," + $.base64.encode(this.getValue());
+    eventFire(link, "click");
+  });
+
 })();
