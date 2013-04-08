@@ -236,3 +236,6 @@ em,i{font-style:italic}
 
 #download-box {position:Fixed; top: 40%; right: 20px; }
 #download-box img {width: 24px; height: 24px;cursor: pointer;}
+
+#fork-me-on-github img{position: absolute; top: 0; right: 0; z-index: 999; border: 0;}
+
