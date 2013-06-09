@@ -24,4 +24,5 @@ http://markdown.miclle.com/
 ##Icon:
 ![Caribbean blue download 4 icon](https://raw.github.com/miclle/Markdown-Editor/master/imgs/download.png)  http://www.iconsdb.com/caribbean-blue-icons/download-4-icon.html
 
-##MIT License
+##License
+Released under the MIT license.

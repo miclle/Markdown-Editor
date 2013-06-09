@@ -16,13 +16,13 @@
   });
 
   /**
-   * insert '*text*' '**text**'
+   * insert '*text*' '**text**' ...
    */
-  CodeMirror.defineExtension("wrapSymbolTag", function(star) {
+  CodeMirror.defineExtension("wrapSymbolTag", function(symbol) {
     var selectString = this.getSelection();
-    this.replaceSelection(star + selectString + star);
+    this.replaceSelection(symbol + selectString + symbol);
     var cursor = this.getCursor(false);
-    if(selectString == "") cursor.ch = cursor.ch - star.length;
+    if(selectString == "") cursor.ch = cursor.ch - symbol.length;
     this.setCursor(cursor);
   });
 
@@ -43,6 +43,25 @@
     link.download = "markdown.md";
     link.href = "data:application/stream;base64," + $.base64.encode(this.getValue());
     eventFire(link, "click");
+  });
+
+  /**
+   * tab fast keys
+   */
+  CodeMirror.defineExtension("tabFastKey", function() {
+    var posEnd = this.getCursor("end");
+    var posStart = { line: posEnd.line, ch: posEnd.ch - 1}
+    switch(this.getRange(posStart, posEnd)){
+      case "a":
+        this.replaceRange("[Title text](http://sample.com/)", posStart, posEnd);
+      break;
+      case "i":
+        this.replaceRange("![Alt text](https://sample.com/)", posStart, posEnd);
+      break;
+      default:
+        CodeMirror.commands.defaultTab(this);
+      break;
+    }
   });
 
 })();

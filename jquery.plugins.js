@@ -28,6 +28,7 @@
           indentWithTabs:   true,
           tabSize:          2,
           showCursorWhenSelecting:  true,
+          highlightSelectionMatches:  true,
           extraKeys: {
             "Cmd-B"   : function(cm) { cm.wrapSymbolTag("**") },
             "Ctrl-B"  : function(cm) { cm.wrapSymbolTag("**") },
@@ -60,7 +61,9 @@
             "Ctrl-6"  : function(cm) { cm.insertTitle(6) },
 
             "Cmd-S"   : function(cm) { cm.saveMarkdownContent() },
-            "Ctrl-S"  : function(cm) { cm.saveMarkdownContent() }
+            "Ctrl-S"  : function(cm) { cm.saveMarkdownContent() },
+
+            "Tab"   : function(cm) {   cm.tabFastKey()  }
           }
         });
 

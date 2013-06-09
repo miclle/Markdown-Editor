@@ -70,16 +70,11 @@ body {
    background-repeat: no-repeat;
 }
 
-span.CodeMirror-matchhighlight {
-  background-color: #e9e9e9;
+.CodeMirror-focused .cm-matchhighlight {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFklEQVQI12NgYGBgkKzc8x9CMDAwAAAmhwSbidEoSQAAAABJRU5ErkJggg==);
   background-position: bottom;
   background-repeat: repeat-x;
 }
-.CodeMirror-focused span.CodeMirror-matchhighlight {
-  background-color: #e7e4ff; !important
-}
-
 
 /* github markdown style */
 input,button,textarea{margin:0;padding:0;font-size:100%;font-family:inherit}
