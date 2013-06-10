@@ -16,6 +16,11 @@ http://markdown.miclle.com/
 * Convert to H6: Cmd + 6	/	Ctrl + 6
 * Save Markdown Content: Cmd + S  / Ctrl + S
 
+##Tab fast keys
+* Insert link tag: `[Title text](http://sample.com/)` : a + Tab
+* Insert image tag: `![Alt text](https://sample.com/)`: i + Tab
+
+
 ##Require libs
 * CodeMirror http://codemirror.net
 * marked https://github.com/chjj/marked
