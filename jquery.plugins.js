@@ -18,6 +18,10 @@
         var $wrapper  = $textarea.parent();
         var $preview  = jQuery($textarea.attr('data-markdown-preview'));
 
+        if(localStorage.markdown != undefined){
+          $textarea.val(localStorage.markdown);
+        }
+
         var editor = CodeMirror.fromTextArea(this, {
           mode:             'gfm',
           theme:            "default",
@@ -70,6 +74,7 @@
         editor.on("change", function(doc, changeObj) {
           $preview.html(marked(doc.getValue()));
           $textarea.val(doc.getValue());
+          localStorage.markdown = doc.getValue();
         });
 
         editor.on('scroll', function(instance){
@@ -78,7 +83,7 @@
         });
 
         $preview.html(marked(editor.getValue()));
-
+        localStorage.markdown = editor.getValue();
       });
 
     }
