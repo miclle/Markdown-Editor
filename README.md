@@ -1,8 +1,5 @@
 #Markdown-Editor
 
-##Demo
-http://markdown.miclle.com/
-
 ##Key Bindings
 * Strong: Select text, Cmd + B	/	Ctrl + B
 * Emphasize: Select text, Cmd + I	/	Ctrl + I
